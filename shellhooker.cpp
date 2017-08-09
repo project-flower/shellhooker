@@ -4,8 +4,8 @@
 #include "stdafx.h"
 #include "shellhooker.h"
 
-static HWINEVENTHOOK hHook;
-static WINEVENTPROC __ShellProc;
+static HWINEVENTHOOK hHook = nullptr;
+static WINEVENTPROC __ShellProc = nullptr;
 
 VOID CALLBACK _ShellProc(HWINEVENTHOOK hWinEventHook, DWORD event, HWND hwnd, LONG idObject, LONG idChild, DWORD idEventThread, DWORD dwmsEventTime);
 
