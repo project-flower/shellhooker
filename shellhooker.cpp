@@ -9,23 +9,10 @@ static WINEVENTPROC __ShellProc;
 
 VOID CALLBACK _ShellProc(HWINEVENTHOOK hWinEventHook, DWORD event, HWND hwnd, LONG idObject, LONG idChild, DWORD idEventThread, DWORD dwmsEventTime);
 
-// これは、エクスポートされた変数の例です。
-SHELLHOOKER_API int nshellhooker=0;
+// これは、エクスポートされた変数です。
 SHELLHOOKER_API HMODULE hModule = nullptr;
 
-// これは、エクスポートされた関数の例です。
-SHELLHOOKER_API int fnshellhooker(void)
-{
-    return 42;
-}
-
-// これは、エクスポートされたクラスのコンストラクターです。
-// クラス定義に関しては shellhooker.h を参照してください。
-Cshellhooker::Cshellhooker()
-{
-    return;
-}
-
+// これは、エクスポートされた関数です。
 SHELLHOOKER_API BOOL CALLBACK ReleaseHook(HWND hwnd)
 {
     if (hHook)
@@ -43,6 +30,7 @@ SHELLHOOKER_API BOOL CALLBACK ReleaseHook(HWND hwnd)
     return TRUE;
 }
 
+// これは、エクスポートされた関数です。
 SHELLHOOKER_API BOOL CALLBACK SetHook(DWORD eventMin, DWORD eventMax, WINEVENTPROC hookProc)
 {
     if (hHook)

@@ -10,16 +10,7 @@
 #define SHELLHOOKER_API __declspec(dllimport)
 #endif
 
-// このクラスは shellhooker.dll からエクスポートされました。
-class SHELLHOOKER_API Cshellhooker {
-public:
-	Cshellhooker(void);
-	// TODO: メソッドをここに追加してください。
-};
-
-extern SHELLHOOKER_API int nshellhooker;
 extern SHELLHOOKER_API HINSTANCE hModule;
 
-SHELLHOOKER_API int fnshellhooker(void);
 SHELLHOOKER_API BOOL CALLBACK ReleaseHook(HWND hwnd);
 SHELLHOOKER_API BOOL CALLBACK SetHook(DWORD eventMin, DWORD eventMax, WINEVENTPROC hookProc);
