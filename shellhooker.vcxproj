@@ -137,6 +137,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="dllmain.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="shellhooker.h" />
     <ClInclude Include="stdafx.h" />

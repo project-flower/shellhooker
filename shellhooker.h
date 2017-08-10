@@ -10,7 +10,8 @@
 #define SHELLHOOKER_API __declspec(dllimport)
 #endif
 
-extern SHELLHOOKER_API HINSTANCE hModule;
-
-SHELLHOOKER_API BOOL CALLBACK ReleaseHook(HWND hwnd);
-SHELLHOOKER_API BOOL CALLBACK SetHook(DWORD eventMin, DWORD eventMax, WINEVENTPROC hookProc);
+namespace ShellHooker
+{
+    SHELLHOOKER_API BOOL CALLBACK ReleaseHook(HWND hwnd);
+    SHELLHOOKER_API BOOL CALLBACK SetHook(DWORD eventMin, DWORD eventMax, WINEVENTPROC hookProc);
+}

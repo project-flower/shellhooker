@@ -1,6 +1,6 @@
 // dllmain.cpp : DLL アプリケーションのエントリ ポイントを定義します。
 #include "stdafx.h"
-#include "shellhooker.h"
+#include "dllmain.h"
 
 BOOL APIENTRY DllMain(
     HMODULE hModule,
@@ -11,7 +11,7 @@ BOOL APIENTRY DllMain(
     switch (ul_reason_for_call)
     {
         case DLL_PROCESS_ATTACH:
-            ::hModule = (HINSTANCE)hModule;
+            ShellHooker::hModule = hModule;
             break;
 
         case DLL_THREAD_ATTACH:
